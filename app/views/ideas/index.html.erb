@@ -1,0 +1,12 @@
+<p data-role='description'>This is the storied app.</p>
+
+<% @idea_types.each do |idea_type| %>
+  <%= link_to idea_type, send("new_#{idea_type}_path") %>
+<% end %>
+
+
+<div id="characters">
+  <% @my_things['characters'].each do |character| %>
+    <p><%= character.name %></p>
+  <%end%>
+</div>

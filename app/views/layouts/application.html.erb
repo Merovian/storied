@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Storied</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if flash[:error] %>
+  <div id="error"><%=flash[:error]%></div>
+<% end %>
+<% if flash[:notice] %>
+  <div id="notice"><%=flash[:notice]%></div>
+<% end %>
+  <h1 class="title">Storied - the idea blender</h1> 
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/willcowen/Workspace/storied/app/controllers/ideas_controller.rb": [
+        1,
+        1,
+        4,
+        4,
+        4,
+        null,
+        null
+      ],
+      "/Users/willcowen/Workspace/storied/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/willcowen/Workspace/storied/app/models/character.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/willcowen/Workspace/storied/app/controllers/characters_controller.rb": [
+        1,
+        1,
+        3,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        2,
+        2,
+        1,
+        null,
+        2,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1359495911
+  }
+}
