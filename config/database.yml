@@ -7,6 +7,7 @@ development:
   adapter: postgresql 
   encoding: unicode
   database: storied_dev 
+  host: localhost
   username: willcowen
   pool: 5
   timeout: 5000

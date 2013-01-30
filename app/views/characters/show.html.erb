@@ -1,0 +1,6 @@
+<div id="<%=@character.dom_name%>" class="details">
+  <p><%= @character.name %> (<%= link_to('edit', edit_character_path(@character)) %>)</p>
+  <p><span class="label">Age:</span> <%=@character.age%></p>
+  <p><span class="label">Description:</span><br/><%= @character.description %></p>
+  <p><span class="label">Conflict:</span><br/><%= @character.conflict %></p>
+</div>

@@ -16,4 +16,13 @@ class CharactersController < ApplicationController
       end
     end
   end
+
+  def show
+    @character = Character.find(params[:id])
+  end
+
+  def edit
+    @character = Character.find(params[:id])
+  end
+
 end

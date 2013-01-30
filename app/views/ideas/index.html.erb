@@ -7,6 +7,6 @@
 
 <div id="characters">
   <% @my_things['characters'].each do |character| %>
-    <p><%= character.name %></p>
+    <div id="<%= character.dom_name %>"><%= link_to(character.name, character) %> <%= link_to('edit', edit_character_path(character)) %></div>
   <%end%>
 </div>
