@@ -18,6 +18,9 @@ feature "Manage a character" do
     character.select_edit
     
     form_should_be_visible('edit_character')
+    fill_in 'Name', with: "New Bart"
+    click_button "Create"
+    page.should have_content("New Bart")
   end
 
   scenario "allows you to edit from the details page" do
@@ -68,7 +71,7 @@ feature "Manage a character" do
     end
     
     def character_item
-      find "div##{Character.new(name: name).dom_name}"
+      find "div##{dom_name(Character.new(name: name), 'name')}" 
     end
   end
 end

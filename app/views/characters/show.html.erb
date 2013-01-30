@@ -1,4 +1,4 @@
-<div id="<%=@character.dom_name%>" class="details">
+<div id="<%=dom_name(@character, 'name')%>" class="details">
   <p><%= @character.name %> (<%= link_to('edit', edit_character_path(@character)) %>)</p>
   <p><span class="label">Age:</span> <%=@character.age%></p>
   <p><span class="label">Description:</span><br/><%= @character.description %></p>
