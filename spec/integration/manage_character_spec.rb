@@ -1,22 +1,19 @@
 require 'spec_helper'
 
 feature "Manage a character" do
-  scenario "shows character details" do
+  before(:each) do
     visit root_url
-    character = character_on_page
-    character.create
+    @character = character_on_page
+    @character.create
+  end
 
-    click_link(character.name)
-    expect(character).to be_detailed
+  scenario "shows character details" do
+    click_link(@character.name)
+    expect(@character).to be_detailed
   end
 
   scenario "allows you to edit immediately from the list" do
-    visit root_url
-    character = character_on_page
-    character.create
-
-    character.select_edit
-    
+    @character.select_edit
     form_should_be_visible('edit_character')
     fill_in 'Name', with: "New Bart"
     click_button "Create"
@@ -24,11 +21,16 @@ feature "Manage a character" do
   end
 
   scenario "allows you to edit from the details page" do
-    visit root_url
-    character = character_on_page
-    character.create
-    click_link(character.name)
-    character.select_edit
+    click_link(@character.name)
+    @character.select_edit
+    form_should_be_visible('edit_character') 
+  end
+
+  scenario "prevents you from submitting invalid edits" do
+    @character.select_edit
+    fill_in 'Name', with: ""
+    click_button "Create"
+    page.should have_content("prohibited this character")
   end
 
   def form_should_be_visible(form_id)

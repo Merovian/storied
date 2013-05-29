@@ -1,0 +1,20 @@
+= form_for @character do |f|
+  = f.error_messages
+
+  = f.label :name 
+  = f.text_field :name 
+  br
+
+  = f.label :age 
+  = f.text_field :age 
+  br
+
+  = f.label :description 
+  = f.text_field :description
+  br
+
+  = f.label :conflict
+  = f.text_field :conflict
+  br
+
+  = f.submit "Create"
