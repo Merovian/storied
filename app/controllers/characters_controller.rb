@@ -6,14 +6,12 @@ class CharactersController < ApplicationController
   def create
     @character = Character.create params[:character]
     
-    respond_to do |format|
-      if @character.save
-        format.html { redirect_to(root_url, :notice => "Character #{@character.name} was successfully created.") }
-        format.xml  { render :xml => @character, :status => :created, :location => root_url }
-      else
-        format.html { render :action=>"new" }
-        format.xml  { render :xml => @character.errors, :status => :unprocessable_entity }
-      end
+    if @character.save
+      flash[:success]="Character #{@character.name} was successfully created."
+      redirect_to root_url
+    else
+      flash.now[:error] = @character.errors.full_messages.to_sentence
+      render :action=>"new" 
     end
   end
 

@@ -20,8 +20,8 @@ feature 'Creating a character' do
     fill_in('Description', :with=>"He's a pirate")
     fill_in('Conflict', :with=>"He is a bad dude.")
     click_button('Create')
-    expect(page).to have_xpath "//div[@id='notice']"
-    within(:xpath, "//div[@id='notice']") do
+    expect(page).to have_xpath "//div[@class='alert alert-success']"
+    within(:xpath, "//div[@class='alert alert-success']") do
       page.should have_content("Character Black Bart was successfully created.")
     end
     character_is_visible("Black Bart")

@@ -9,7 +9,7 @@ end
 
 def user_should_see_app_information
   expect(page).to have_css '[data-role="description"]'
-  expect(page).to have_css 'h1.title', text:'Storied - the idea blender'
+  expect(page).to have_css 'h1.title', text:'Storied the idea blender'
 end
 
 def view_homepage

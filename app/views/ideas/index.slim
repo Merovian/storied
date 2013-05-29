@@ -1,10 +1,9 @@
 p data-role='description' This is the storied app.
 
-- @idea_types.each do |idea_type|
-  = link_to idea_type, send("new_#{idea_type}_path")
-
 div#characters
+  h3 characters
   - @my_things['characters'].each do |character|
     div id="#{dom_name(character, 'name')}" 
-      = link_to(character.name, character) 
-      = link_to('edit', edit_character_path(character))
+      div.span3
+        = link_to(character.name, character, :class=>'btn btn-primary btn-block') 
+      = link_to('edit', edit_character_path(character), :class=>'btn btn-mini')

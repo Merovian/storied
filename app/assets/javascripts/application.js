@@ -12,4 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require flatui/js/jquery.ui.touch-punch.min.js
+//= require flatui/js/bootstrap.min.js
+//= require flatui/js/bootstrap-select.js
+//= require flatui/js/bootstrap-switch.js
+//= require flatui/js/flatui-checkbox.js
+//= require flatui/js/flatui-radio.js
+//= require flatui/js/jquery.tagsinput.js
+//= require flatui/js/jquery.placeholder.js
+//= require flatui/js/jquery.stacktable.js
+//= require flatui/js/flatui-application.js
 //= require_tree .

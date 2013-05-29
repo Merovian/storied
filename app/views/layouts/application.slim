@@ -2,16 +2,41 @@ doctype html
 html
   head
   title = content_for?(:title) ? yield(:title) : "Storied"
-  = stylesheet_link_tag    "application", :media => "all"
+  = stylesheet_link_tag "application"
   = javascript_include_tag "application"
   = csrf_meta_tags
   = yield(:head)
 
   body
-    - if flash[:error] 
-      div#error = flash[:error]
-    - if flash[:notice]
-      div#notice = flash[:notice]
+    div#wrap
+      div.container
+        div#header.row
+          h1.title 
+            |Storied 
+            small the idea blender
 
-    h1.title Storied - the idea blender
-    = yield
+          div.span9
+            div.navbar.navbar-inverse
+              div.navbar-inner
+                div.container
+                  button.btn.btn-navbar type="button" data-toggle="collapse" data-target="#nav-collapse-01"
+                  div#nav-collapse-01.nav-collapse.collapse
+                    ul.nav
+                      li = link_to("home", root_path)
+                      - if @idea_types.present? 
+                        - @idea_types.each do |idea_type|
+                          li = link_to("new #{idea_type}", send("new_#{idea_type}_path"))
+
+        div#content.row
+          div.flash
+            - flash.each do |type, message|
+              div class="alert alert-#{type}"
+                - if message.is_a? String
+                  = message
+              button.close type="button" data-dismiss="alert" &times;
+
+          = yield
+
+    div#footer
+      div.container
+        p &copy; FourFold 2013

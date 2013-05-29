@@ -64,5 +64,8 @@ module Storied
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # New Asset Path
+    config.assets.paths << Rails.root.join("app", "assets", "straps")
   end
 end

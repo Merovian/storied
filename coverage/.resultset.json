@@ -1,27 +1,22 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/willcowen/Workspace/storied/app/models/character.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/willcowen/Workspace/storied/app/controllers/ideas_controller.rb": [
-        1,
-        1,
-        14,
-        14,
-        14,
-        null,
-        null
-      ],
       "/Users/willcowen/Workspace/storied/app/controllers/application_controller.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/willcowen/Workspace/storied/app/helpers/application_helper.rb": [
+        1,
+        1,
+        13,
+        null,
+        4,
+        1,
+        null,
+        3,
+        null,
+        null,
         null
       ],
       "/Users/willcowen/Workspace/storied/app/controllers/characters_controller.rb": [
@@ -34,13 +29,11 @@
         6,
         null,
         6,
-        6,
-        10,
+        5,
         5,
         null,
-        2,
         1,
-        null,
+        1,
         null,
         null,
         null,
@@ -67,8 +60,26 @@
         null,
         null,
         null
+      ],
+      "/Users/willcowen/Workspace/storied/app/models/character.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/willcowen/Workspace/storied/app/controllers/ideas_controller.rb": [
+        1,
+        1,
+        14,
+        14,
+        14,
+        null,
+        null
       ]
     },
-    "timestamp": 1369842608
+    "timestamp": 1369861317
   }
 }
