@@ -14,26 +14,26 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-01-30T10:00:43-05:00">2013-01-30T10:00:43-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-29T10:49:00-04:00">2013-05-29T10:49:00-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.44%</span></span>
+    (<span class="covered_percent"><span class="green">95.24%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.95
+         3.1
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>4</b> files in total.
-    <b>36</b> relevant lines. 
-    <span class="green"><b>34</b> lines covered</span> and
+    <b>5</b> files in total.
+    <b>42</b> relevant lines. 
+    <span class="green"><b>40</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -78,6 +78,16 @@
         <td>5</td>
         <td>0</td>
         <td>7.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#4eefdef28894dec8e908df602db898b8a443bff4" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>3.7</td>
       </tr>
       
       <tr>
@@ -253,17 +263,17 @@
     (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.0
+       <span class="green">
+         3.7
        </span>
     </span> hits/line)
   </h2>
   <a name="Helpers"></a>
   <div>
-    <b>0</b> files in total.
-    <b>0.0</b> relevant lines. 
-    <span class="green"><b>0.0</b> lines covered</span> and
-    <span class="red"><b>0.0</b> lines missed </span>
+    <b>1</b> files in total.
+    <b>6</b> relevant lines. 
+    <span class="green"><b>6</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -278,6 +288,16 @@
       </tr>
     </thead>
     <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#4eefdef28894dec8e908df602db898b8a443bff4" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>3.7</td>
+      </tr>
       
     </tbody>
   </table>
@@ -725,6 +745,90 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="4eefdef28894dec8e908df602db898b8a443bff4">
+  <div class="header">
+    <h3>app/helpers/application_helper.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module ApplicationHelper</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def dom_name(object, attribute='id')</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="3">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    &quot;#{object.class.to_s.downcase}_#{object.send(attribute).gsub(/[^0-9A-Za-z\-_]/, '_')}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  rescue</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if object.respond_to?('id')</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &quot;#{object.class.to_s.downcase}_#{object.id}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      &quot;#{object.class.to_s.downcase}_#{object.to_s.gsub(/[^0-9A-Za-z\-_]/, '_')}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
