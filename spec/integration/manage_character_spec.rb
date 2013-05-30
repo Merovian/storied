@@ -30,7 +30,7 @@ feature "Manage a character" do
     @character.select_edit
     fill_in 'Name', with: ""
     click_button "Submit"
-    page.should have_content("prohibited this character")
+    should_see_errors_for_fields(['Name'])
   end
 
   def form_should_be_visible(form_id)
