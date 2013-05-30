@@ -5,21 +5,20 @@ feature 'Creating a character' do
     go_to_new_character_page
   end
 
-  scenario 'validates name and age' do
+  scenario 'validates name' do
     go_to_new_character_page
     fill_in('Name', :with=>'')
-    fill_in('Age', :with=>'what the heck')
-    click_button('Create')
-    should_see_errors_for_fields(['Name', 'Age'])
+    fill_in('Mentality', :with=>'')
+    click_button('Submit')
+    should_see_errors_for_fields(['Name'])
   end
 
   scenario 'saves the character' do
     go_to_new_character_page
     fill_in('Name', :with=>'Black Bart')
-    fill_in('Age', :with=>'31')
     fill_in('Description', :with=>"He's a pirate")
-    fill_in('Conflict', :with=>"He is a bad dude.")
-    click_button('Create')
+    fill_in('Mentality', :with=>"He is a bad dude.")
+    click_button('Submit')
     expect(page).to have_xpath "//div[@class='alert alert-success']"
     within(:xpath, "//div[@class='alert alert-success']") do
       page.should have_content("Character Black Bart was successfully created.")
@@ -35,7 +34,7 @@ feature 'Creating a character' do
 
   def go_to_new_character_page
     visit root_path
-    click_link('character')
+    click_link('new character')
     form_should_be_visible('new_character')
   end
 

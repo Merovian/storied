@@ -2,8 +2,9 @@ p data-role='description' This is the storied app.
 
 div#characters
   h3 characters
-  - @my_things['characters'].each do |character|
-    div id="#{dom_name(character, 'name')}" 
-      div.span3
-        = link_to(character.name, character, :class=>'btn btn-primary btn-block') 
-      = link_to('edit', edit_character_path(character), :class=>'btn btn-mini')
+  - @ideas.each do |character|
+    - if character.class == Character
+      div id="#{dom_name(character, 'name')}" 
+        div.span3
+          = link_to(character.name, character, :class=>'btn btn-primary btn-block') 
+        = link_to('edit', edit_character_path(character), :class=>'btn btn-mini')

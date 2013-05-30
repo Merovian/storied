@@ -1,0 +1,70 @@
+IDEA
+habtm plots
+name
+description
+mentality
+start_state
+end_state
+
+  Character
+    habtm dialogs
+    habtm items
+    habtm set_pieces
+    name
+    description
+    mentality
+
+  Location
+    habtm set_pieces
+    habtm items
+    name
+    description
+
+  Item
+    habtm characters
+    habtm locations
+    habtm set_pieces
+    name
+    description
+
+  Set Piece
+    habtm characters
+    habtm locations
+    habtm items
+    name
+    start state
+    end state
+    description
+  
+  Dialog
+    habtm characters
+    name
+    description
+
+
+CONCERN
+habtm plots
+description
+character_id
+location_id
+set_piece_id
+dialog_id
+item_id
+
+
+PLOT
+name
+arc
+habtm ideas
+habtm concerns
+
+
+IDEAS habtm IDEAS through CONCERNS
+(characters <habtm> dialogs)
+(characters <habtm> items)
+(set_pieces <habtm> characters)
+(set_pieces <habtm> locations)
+(set_pieces <habtm> items)
+
+IDEAS_PLOTS
+CONCERNS_PLOTS

@@ -13,11 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20130129200746) do
 
-  create_table "characters", :force => true do |t|
+  create_table "ideas", :force => true do |t|
     t.string   "name"
-    t.integer  "age"
-    t.string   "description"
-    t.string   "conflict"
+    t.text     "description"
+    t.text     "mentality"
+    t.text     "start_state"
+    t.text     "end_state"
+    t.string   "type"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

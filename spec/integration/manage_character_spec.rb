@@ -16,7 +16,7 @@ feature "Manage a character" do
     @character.select_edit
     form_should_be_visible('edit_character')
     fill_in 'Name', with: "New Bart"
-    click_button "Create"
+    click_button "Submit"
     page.should have_content("New Bart")
   end
 
@@ -29,7 +29,7 @@ feature "Manage a character" do
   scenario "prevents you from submitting invalid edits" do
     @character.select_edit
     fill_in 'Name', with: ""
-    click_button "Create"
+    click_button "Submit"
     page.should have_content("prohibited this character")
   end
 
@@ -45,12 +45,11 @@ feature "Manage a character" do
     include Capybara::DSL
 
     def create
-      click_link 'character'
+      click_link 'new character'
       fill_in('Name', :with=>name)
-      fill_in('Age', :with=>'31')
       fill_in('Description', :with=>"He's a pirate")
-      fill_in('Conflict', :with=>"He is a bad dude.")
-      click_button('Create')
+      fill_in('Mentality', :with=>"He is a bad dude.")
+      click_button('Submit')
     end
 
     def visible?

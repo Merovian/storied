@@ -1,0 +1,9 @@
+div.details id="#{dom_name(@idea, 'name')}"
+  p 
+    #{@idea.name} (#{link_to('edit', edit_character_path(@idea))})
+  p
+    span.label Description:
+    = @idea.description
+  p
+    span.label Mentality:
+    = @idea.mentality

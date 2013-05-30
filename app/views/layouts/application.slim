@@ -23,9 +23,7 @@ html
                   div#nav-collapse-01.nav-collapse.collapse
                     ul.nav
                       li = link_to("home", root_path)
-                      - if @idea_types.present? 
-                        - @idea_types.each do |idea_type|
-                          li = link_to("new #{idea_type}", send("new_#{idea_type}_path"))
+                      li = link_to("new character", new_character_path)
 
         div#content.row
           div.flash
