@@ -23,3 +23,15 @@ div#items
           = link_to('edit', edit_item_path(item), :class=>'btn btn-mini')
   - else
     p No items yet.
+
+div#locations
+  h3 locations
+  - if @ideas.any? {|i| i.class == Location}
+    - @ideas.each do |location|
+      - if location.class == Location 
+        div id="#{dom_name(location, 'name')}" 
+          div.span3
+            = link_to(location.name, location, :class=>'btn btn-primary btn-block') 
+          = link_to('edit', edit_location_path(location), :class=>'btn btn-mini')
+  - else
+    p No items yet.

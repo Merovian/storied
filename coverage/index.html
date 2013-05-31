@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-31T08:33:52-04:00">2013-05-31T08:33:52-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-31T10:44:57-04:00">2013-05-31T10:44:57-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.02
+         2.25
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>36</b> relevant lines. 
-    <span class="green"><b>36</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>37</b> relevant lines. 
+    <span class="green"><b>37</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,7 +67,7 @@
         <td>27</td>
         <td>27</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>8.5</td>
       </tr>
       
       <tr>
@@ -100,6 +100,16 @@
         <td>1.0</td>
       </tr>
       
+      <tr>
+        <td class="strong"><a href="#309e0068df45592e7f5b200a82a18332814f0539" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
     </tbody>
   </table>
 </div>
@@ -113,7 +123,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.55
+         4.75
        </span>
     </span> hits/line)
   </h2>
@@ -155,7 +165,7 @@
         <td>27</td>
         <td>27</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>8.5</td>
       </tr>
       
     </tbody>
@@ -176,9 +186,9 @@
   </h2>
   <a name="Models"></a>
   <div>
-    <b>3</b> files in total.
-    <b>7</b> relevant lines. 
-    <span class="green"><b>7</b> lines covered</span> and
+    <b>4</b> files in total.
+    <b>8</b> relevant lines. 
+    <span class="green"><b>8</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -217,6 +227,16 @@
       
       <tr>
         <td class="strong"><a href="#918f26adb96fd07da9ea91ebdad7087c7a9a0723" class="src_link" title="app/models/item.rb">app/models/item.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#309e0068df45592e7f5b200a82a18332814f0539" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
         <td>1</td>
@@ -450,8 +470,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="28" data-linenumber="3">
-          <span class="hits">28</span>
+        <li class="covered" data-hits="40" data-linenumber="3">
+          <span class="hits">40</span>
           
           <code class="ruby">    @ideas = params[:type].present? ? idea_type.all : Idea.all</code>
         </li>
@@ -474,8 +494,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="7">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="20" data-linenumber="7">
+          <span class="hits">20</span>
           
           <code class="ruby">    @idea = idea_type.new</code>
         </li>
@@ -498,8 +518,8 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="11">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="17" data-linenumber="11">
+          <span class="hits">17</span>
           
           <code class="ruby">    @idea = idea_type.create params[params[:type].downcase.to_sym]</code>
         </li>
@@ -510,20 +530,20 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="13">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="17" data-linenumber="13">
+          <span class="hits">17</span>
           
           <code class="ruby">    if @idea.save</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="14">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="16" data-linenumber="14">
+          <span class="hits">16</span>
           
           <code class="ruby">      flash[:success]=&quot;#{@idea.class.to_s.titleize} #{@idea.name} was successfully created.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="15">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="16" data-linenumber="15">
+          <span class="hits">16</span>
           
           <code class="ruby">      redirect_to root_url</code>
         </li>
@@ -570,8 +590,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="23">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="23">
+          <span class="hits">9</span>
           
           <code class="ruby">    @idea = idea_type.find(params[:id])</code>
         </li>
@@ -594,8 +614,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="27">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="27">
+          <span class="hits">7</span>
           
           <code class="ruby">    @idea = idea_type.find(params[:id])</code>
         </li>
@@ -618,32 +638,32 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="31">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="31">
+          <span class="hits">4</span>
           
           <code class="ruby">    @idea = idea_type.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="32">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="32">
+          <span class="hits">4</span>
           
           <code class="ruby">    @idea.update_attributes(params[params[:type].downcase.to_sym])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="33">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="33">
+          <span class="hits">4</span>
           
           <code class="ruby">    if @idea.save</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="34">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="34">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:success]=&quot;#{@idea.class.to_s.titleize} #{@idea.name} was successfully created.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="35">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="35">
+          <span class="hits">3</span>
           
           <code class="ruby">      redirect_to root_url</code>
         </li>
@@ -702,8 +722,8 @@
           <code class="ruby">  def idea_type</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="45">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="57" data-linenumber="45">
+          <span class="hits">57</span>
           
           <code class="ruby">    params[:type].constantize</code>
         </li>
@@ -838,6 +858,42 @@
           <span class="hits">1</span>
           
           <code class="ruby">class Item &lt; Idea</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="309e0068df45592e7f5b200a82a18332814f0539">
+  <div class="header">
+    <h3>app/models/location.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Location &lt; Idea</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">

@@ -4,4 +4,6 @@ Storied::Application.routes.draw do
     only: [:index, :new, :create, :show, :edit, :update]
   resources :items, :controller => "ideas", :type=>"Item",
     only: [:index, :new, :create, :show, :edit, :update]
+  resources :locations, :controller => "ideas", :type=>"Location",
+    only: [:index, :new, :create, :show, :edit, :update]
 end
