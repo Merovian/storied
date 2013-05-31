@@ -1,6 +1,6 @@
 div.details id="#{dom_name(@idea, 'name')}"
   p 
-    #{@idea.name} (#{link_to('edit', edit_character_path(@idea))})
+    #{@idea.name} (#{link_to('edit', send("edit_#{@idea.class.to_s.downcase}_path", @idea))})
   p
     span.label Description:
     = @idea.description

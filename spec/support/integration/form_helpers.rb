@@ -7,7 +7,7 @@ module Integration
   end
 
   def form_should_be_visible(form_id)
-    expect(page).to have_xpath "//div[@id='content-entry']/form[@id='#{form_id}']"
+    expect(page).to have_xpath "//div[@id='content-entry']/form[@class='#{form_id}']"
   end
 
   def should_see_errors_for_fields(fields_array=[])
