@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = idea_type.create params[params[:type].downcase.to_sym]
+    @idea = idea_type.create params[params[:type].underscore.to_sym]
     
     if @idea.save
       flash[:success]="#{@idea.class.to_s.titleize} #{@idea.name} was successfully created."
@@ -29,7 +29,7 @@ class IdeasController < ApplicationController
 
   def update
     @idea = idea_type.find(params[:id])
-    @idea.update_attributes(params[params[:type].downcase.to_sym])
+    @idea.update_attributes(params[params[:type].underscore.to_sym])
     if @idea.save
       flash[:success]="#{@idea.class.to_s.titleize} #{@idea.name} was successfully created."
       redirect_to root_url

@@ -17,39 +17,39 @@
       "/Users/willcowen/Workspace/storied/app/controllers/ideas_controller.rb": [
         1,
         1,
-        52,
+        67,
         null,
         null,
         1,
-        26,
+        34,
         null,
         null,
         1,
-        22,
+        29,
         null,
-        22,
-        21,
-        21,
+        29,
+        27,
+        27,
         null,
-        1,
-        1,
+        2,
+        2,
         null,
-        null,
-        null,
-        1,
-        12,
         null,
         null,
         1,
-        9,
+        16,
         null,
         null,
         1,
+        11,
+        null,
+        null,
+        1,
+        6,
+        6,
+        6,
         5,
         5,
-        5,
-        4,
-        4,
         null,
         1,
         1,
@@ -59,7 +59,7 @@
         1,
         null,
         1,
-        74,
+        96,
         null,
         null,
         null
@@ -69,12 +69,12 @@
         1,
         null
       ],
-      "/Users/willcowen/Workspace/storied/app/models/location.rb": [
+      "/Users/willcowen/Workspace/storied/app/models/item.rb": [
         1,
         null,
         null
       ],
-      "/Users/willcowen/Workspace/storied/app/models/item.rb": [
+      "/Users/willcowen/Workspace/storied/app/models/location.rb": [
         1,
         null,
         null
@@ -83,8 +83,14 @@
         1,
         null,
         null
+      ],
+      "/Users/willcowen/Workspace/storied/app/models/set_piece.rb": [
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1370012207
+    "timestamp": 1370015863
   }
 }

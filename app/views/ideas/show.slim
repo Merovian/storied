@@ -1,6 +1,6 @@
 div.details id="#{dom_name(@idea, 'name')}"
   p 
-    #{@idea.name} (#{link_to('edit', send("edit_#{@idea.class.to_s.downcase}_path", @idea))})
+    #{@idea.name} (#{link_to('edit', send("edit_#{@idea.class.to_s.underscore}_path", @idea))})
   p
     span.label Description:
     = @idea.description
@@ -9,3 +9,13 @@ div.details id="#{dom_name(@idea, 'name')}"
     p
       span.label Mentality:
       = @idea.mentality
+
+  - if @idea.class.accessible_attributes.include?(:start_state)
+    p
+      span.label = "Start state:"
+      = @idea.start_state
+
+  - if @idea.class.accessible_attributes.include?(:end_state)
+    p
+      span.label = "End state:"
+      = @idea.end_state

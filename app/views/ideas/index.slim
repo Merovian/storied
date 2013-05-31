@@ -47,3 +47,15 @@ div#dialogs
           = link_to('edit', edit_dialog_path(dialog), :class=>'btn btn-mini')
   - else
     p No dialogs yet.
+
+div#set_pieces
+  h3 set pieces
+  - if @ideas.any? {|i| i.class == SetPiece}
+    - @ideas.each do |sp|
+      - if sp.class == SetPiece
+        div id="#{dom_name(sp, 'name')}" 
+          div.span3
+            = link_to(sp.name, sp, :class=>'btn btn-primary btn-block') 
+          = link_to('edit', edit_set_piece_path(sp), :class=>'btn btn-mini')
+  - else
+    p No set pieces yet.

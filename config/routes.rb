@@ -8,4 +8,6 @@ Storied::Application.routes.draw do
     only: [:index, :new, :create, :show, :edit, :update]
   resources :dialogs, :controller => "ideas", :type=>"Dialog",
     only: [:index, :new, :create, :show, :edit, :update]
+  resources :set_pieces, :controller => "ideas", :type=>"SetPiece",
+    only: [:index, :new, :create, :show, :edit, :update]
 end

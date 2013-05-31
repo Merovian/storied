@@ -1,0 +1,18 @@
+= form_for @idea do |f|
+  = f.label :name
+  = f.text_field :name
+  br
+
+  = f.label :description
+  = f.text_field :description
+  br
+
+  = f.label :start_state
+  = f.text_field :start_state
+  br
+
+  = f.label :end_state
+  = f.text_field :end_state
+  br
+
+  = f.submit "Submit"

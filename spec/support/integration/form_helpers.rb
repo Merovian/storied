@@ -2,7 +2,7 @@ module Integration
 
   def go_to_new_object_form(idea_type)
     visit root_path
-    click_link("new #{idea_type}")
+    click_link("new #{idea_type.gsub(/_/, " ")}")
     form_should_be_visible("new_#{idea_type}")
   end
 
