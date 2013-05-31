@@ -34,4 +34,16 @@ div#locations
             = link_to(location.name, location, :class=>'btn btn-primary btn-block') 
           = link_to('edit', edit_location_path(location), :class=>'btn btn-mini')
   - else
-    p No items yet.
+    p No locations yet.
+
+div#dialogs
+  h3 dialogs
+  - if @ideas.any? {|i| i.class == Dialog}
+    - @ideas.each do |dialog|
+      - if dialog.class == Dialog
+        div id="#{dom_name(dialog, 'name')}" 
+          div.span3
+            = link_to(dialog.name, dialog, :class=>'btn btn-primary btn-block') 
+          = link_to('edit', edit_dialog_path(dialog), :class=>'btn btn-mini')
+  - else
+    p No dialogs yet.

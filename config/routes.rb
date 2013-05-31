@@ -6,4 +6,6 @@ Storied::Application.routes.draw do
     only: [:index, :new, :create, :show, :edit, :update]
   resources :locations, :controller => "ideas", :type=>"Location",
     only: [:index, :new, :create, :show, :edit, :update]
+  resources :dialogs, :controller => "ideas", :type=>"Dialog",
+    only: [:index, :new, :create, :show, :edit, :update]
 end
