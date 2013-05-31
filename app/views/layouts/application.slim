@@ -23,11 +23,14 @@ html
                   div#nav-collapse-01.nav-collapse.collapse
                     ul.nav
                       li = link_to("home", root_path)
-                      li = link_to("new character", new_character_path)
-                      li = link_to("new item", new_item_path)
-                      li = link_to("new location", new_location_path)
-                      li = link_to("new dialog", new_dialog_path)
-                      li = link_to("new set piece", new_set_piece_path)
+                      li
+                        = link_to("new idea", "#")
+                        ul
+                          li = link_to("new character", new_character_path)
+                          li = link_to("new item", new_item_path)
+                          li = link_to("new location", new_location_path)
+                          li = link_to("new dialog", new_dialog_path)
+                          li = link_to("new set piece", new_set_piece_path)
 
         div#content.row
           div.flash
@@ -38,6 +41,8 @@ html
                 button.close type="button" data-dismiss="alert" &times;
 
           = yield
+
+      div#push
 
     div#footer
       div.container
