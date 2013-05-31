@@ -40,6 +40,11 @@ feature "Manage a character" do
     expect(@character).to be_detailed
   end
 
+  scenario "character has mentality" do
+    click_link(@character.name)
+    page.should have_css 'span.label', text: "Mentality"
+  end
+
   scenario "allows you to edit immediately from the list" do
     @character.select_edit
     form_should_be_visible('edit_character')

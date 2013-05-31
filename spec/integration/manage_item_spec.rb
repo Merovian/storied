@@ -46,6 +46,11 @@ feature "Manage an Item" do
     form_should_be_visible('edit_item')
   end
 
+  scenario "item should not have mentality" do
+    click_link(@item.name)
+    page.should have_no_css 'span.label', text: "Mentality"
+  end
+
 
   def item_on_page
     ItemOnPage.new('Peg Leg')

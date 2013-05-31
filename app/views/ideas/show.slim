@@ -4,6 +4,8 @@ div.details id="#{dom_name(@idea, 'name')}"
   p
     span.label Description:
     = @idea.description
-  p
-    span.label Mentality:
-    = @idea.mentality
+
+  - if @idea.class.accessible_attributes.include?(:mentality)
+    p
+      span.label Mentality:
+      = @idea.mentality
